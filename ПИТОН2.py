@@ -90,6 +90,11 @@ def stringsort(s):
         for j in range(0,int(s)):
             if a[i]==len(lst[j]):
                 print(lst[j])
+#задание 10
+def srtringsortsekond(s):
+    s = s.split(' ')
+    s=sorted(s,key=len)
+    return s
 s=(input())
 stringsort(s)
 
