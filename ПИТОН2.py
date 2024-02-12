@@ -98,3 +98,44 @@ def srtringsortsekond(s):
 s=(input())
 stringsort(s)
 
+#задание 11
+def countvowelsletter(word):
+    count=0
+    word = word.lower()
+    for letter in word:
+        if letter in ['a', 'e', 'i', 'o', 'u', 'y', 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я','1','2','3','4','5','6','7','8','9','0']:
+            count += 1
+    return count
+
+def countconsonantletter(word):
+    count = 0
+    word = word.lower()
+    for letter in word:
+            if letter not in ['a', 'e', 'i', 'o', 'u', 'y', 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я','1','2','3','4','5','6','7','8','9','0']:
+                count += 1
+    return count
+
+def sortbyletter(s):
+    print("введите строки")
+    lst = []
+    count=0
+    a = []
+    b = []
+    for i in range(0, int(s)):
+        print("№", i)
+        lst.insert(i, input())
+    for i in  range(0,int(s)):
+        a.append(countvowelsletter(lst[i]))
+        b.append(countconsonantletter(lst[i]))
+    b.sort()
+    a.sort()
+    print("по гласным")
+    for i in range(0, int(s)):
+        for j in range(0, int(s)):
+            if a[i] == countvowelsletter(lst[j]):
+                print(lst[j])
+    print("по согласным")
+    for i in range(0, int(s)):
+        for j in range(0, int(s)):
+            if b[i] == countconsonantletter(lst[j]):
+                print(lst[j])
