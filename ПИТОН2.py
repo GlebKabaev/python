@@ -163,3 +163,27 @@ def ASCII(s):
         for j in range(0, int(s)):
             if a2[i] == ((a[0]-a[j])**2)**(1/2):
                 print(lst[j])
+#13
+def ASCII2(s):
+    print("введите строки")
+    lst = []
+    a=[]
+    a2=[]
+    x = 0
+    for i in range(0, int(s)):
+        print("№", i)
+        lst.insert(i, input())
+    for i in range(0, int(s)):
+        x=0
+        for j in range(0, len(lst[i])):
+            x += int(ord(lst[i][j]))
+        x=x/len(lst[i])
+        a.append(x)
+    for i in range(0, len(a)):
+        a2.append(((a[0]-a[i])**2)**0.5)
+    a2.sort()
+
+    for i in range(0, int(s)):
+        for j in range(0, int(s)):
+            if a2[i] == ((a[0]-a[j])**2)**(1/2):
+                print(lst[j])
