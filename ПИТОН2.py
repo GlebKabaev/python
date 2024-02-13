@@ -187,3 +187,39 @@ def ASCII2(s):
         for j in range(0, int(s)):
             if a2[i] == ((a[0]-a[j])**2)**(1/2):
                 print(lst[j])
+#14
+def coollettercounter(s):
+    print("введите строки")
+    lst = []
+    a=[]
+    a2=[]
+    lettercounterin = 0
+    lettercounter=0
+    allraws=''
+    for i in range(0, int(s)):
+        print("№", i)
+        lst.insert(i, input())
+    for i in range(0, int(s)):
+        allraws +=lst[i]
+    allrawscount = sorted([(allraws.count(letter), letter) for letter in set(allraws)], reverse=True)
+    for i in  range(0,len(allraws)):
+        if allrawscount[0][1]==allraws[i]:
+            lettercounter+=1
+
+    for i in range(0, int(s)):
+        lettercounterin = 0
+        for j in range(0, len(lst[i])):
+            if lst[i][j]==allrawscount[0][1]:
+                lettercounterin+=1
+        a.append(lettercounterin)
+    for i in range(0, len(a)):
+        a2.append(((lettercounter-a[i])**2)**0.5)
+    a2.sort()
+
+    for i in range(0, int(s)):
+        for j in range(0, int(s)):
+            if a2[i] == ((lettercounter-a[j])**2)**0.5:
+                print(lst[j])
+
+
+
