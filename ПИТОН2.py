@@ -234,7 +234,7 @@ def pusharray(s):
     x[int(s)-2]=first
     print(x)
 #16
-def pusharray(s):
+def pusharray2(s):
     x=[]
     for i in range(0,int(s)):
         x.append(int(input()))
