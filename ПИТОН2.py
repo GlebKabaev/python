@@ -220,6 +220,20 @@ def coollettercounter(s):
         for j in range(0, int(s)):
             if a2[i] == ((lettercounter-a[j])**2)**0.5:
                 print(lst[j])
+#15
+def pusharray(s):
+    x=[]
+    for i in range(0,int(s)):
+        x.append(int(input()))
+    first=x[0]
+    second=x[1]
+    for i in range(0,int(s)):
+        if(i<int(s)-2):
+            x[i]=x[i+2]
+    x[int(s)-1]=second
+    x[int(s)-2]=first
+    print(x)
+
 
 
 
