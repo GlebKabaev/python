@@ -254,6 +254,37 @@ def numcounter(s):
     for i in range(0, int(s)):
         if x[i]%2==0:chetniy+=1
     print(chetniy)
+#18
+def mincounter(s):
+    x=[]
+    counter = 0
+    for i in range(0,int(s)):
+        x.append(int(input()))
+    for i in range(0, int(s)):
+        if x[i]==min(x):counter+=1
+    print(counter)
+#19
+def sortcounter(s):
+    x=[]
+    y=[]
+    numbercounter=[0]*int(s)
+    rez=''
+    counter = 0
+    for i in range(0,int(s)):
+        x.append(int(input()))
+    for i in range(0, int(s)):
+        if(x[i] not in y):
+            y.append(x[i])
+    for i in range(0, len(y)):
+        for j in range(0, len(x)):
+            if y[i]==x[j]:
+                numbercounter[i]+=1
+    while sum(numbercounter)!=0:
+        for i in range(0, len(y)):
+            if numbercounter[i]==max(numbercounter):
+                rez += str(y[i]) * numbercounter[i]
+                numbercounter[i]=0
+    print (rez)
 
 
 
