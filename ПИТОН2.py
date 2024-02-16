@@ -233,6 +233,21 @@ def pusharray(s):
     x[int(s)-1]=second
     x[int(s)-2]=first
     print(x)
+#16
+def pusharray(s):
+    x=[]
+    for i in range(0,int(s)):
+        x.append(int(input()))
+    first=x[0]
+    for i in range(0,int(s)):
+        if(i<int(s)-1):
+            x[i]=x[i+1]
+
+    x[int(s)-1]=first
+    print(x)
+
+
+
 
 
 
