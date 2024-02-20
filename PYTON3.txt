@@ -351,7 +351,7 @@ def sortcounter(s):
                 numbercounter[i] = 0
     print(rez)
 
-numoftusk=input("Введите номер задания")
+numoftusk=int(input("Введите номер задания"))
 if numoftusk==1:
     mode=input("введите входное значение")
     print(first(mode))
@@ -408,6 +408,5 @@ if numoftusk == 18:
 if numoftusk == 19:
     mode = input("введите входное значение")
     print(sortcounter(mode))
-
 
 
