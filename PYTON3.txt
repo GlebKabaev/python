@@ -2,6 +2,7 @@ import string
 import math
 # 1
 def first(n):
+    n=int (n)
     rez = 0
     for i in range(1, n + 1):
         r = 0
@@ -16,7 +17,8 @@ def first(n):
     return rez
 
 # 2
-def second(n):
+def secondd(n):#кол-во нечетных чисел идущих до этого числа больше трех
+    n=int(n)
     rez = 0
     for i in range(1, n + 1):
         if i % 2 != 0 and i > 3:
@@ -24,7 +26,7 @@ def second(n):
     return rez
 
 #3
-def suminstr():
+def suminstr():#произведение числа сумма цифор которого меньше самого числа например 14
     ch=int(input())
     chsum=sum([int(c) for c in str(ch)])
     #n=int(input())
@@ -56,7 +58,7 @@ def ispolindrom(s):
     return flag
 
 #6
-def datafinder(s):
+def datafinder(s):#найти дату например рвлорылорваылоравол ловырловырлор лорывлоарлрывалорваы ловырдлардлывор 20 мая 2040 ловырлавоырлвыаорлвыа
     countblank = 0
     for a in range(0, len(s)):
         if (s[a] == ' '):
@@ -64,7 +66,7 @@ def datafinder(s):
     s = s.split(' ')
     for i in range(0, countblank):
         if s[i] >= "1" and s[i] <= "31":
-            if not (s[i + 1] >= "0" and s[i + 1] < "9"):
+            if not (s[i + 1] >= "0" and s[i + 1] <= "9"):
                 if s[i + 2] >= "1000" and s[i + 2] <= "9999":
                     return (s[i], s[i + 1], s[i + 2])
 
@@ -355,27 +357,27 @@ numoftusk=int(input("Введите номер задания"))
 if numoftusk==1:
     mode=input("введите входное значение")
     print(first(mode))
-if numoftusk==2:
+if numoftusk==2:#кол-во нечетных чисел идущих до этого числа больше трех
     mode = input("введите входное значение")
-    print(second(mode))
-if numoftusk == 3:
+    print(secondd(mode))
+if numoftusk == 3:#произведение числа сумма цифор которого меньше самого числа например 14
     print(suminstr())
-if numoftusk == 4:
+if numoftusk == 4:#кол-во русских
     mode = input("введите входное значение")
     print(countrus(mode))
-if numoftusk == 5:
+if numoftusk == 5:#проверка на полиндром
     mode = input("введите входное значение")
     print(ispolindrom(mode))
-if numoftusk == 6:
+if numoftusk == 6:#найти дату например рвлорылорваылоравол ловырловырлор лорывлоарлрывалорваы ловырдлардлывор 20 мая 2040 ловырлавоырлвыаорлвыа
     mode = input("введите входное значение")
     print(datafinder(mode))
-if numoftusk == 7:
+if numoftusk == 7:#максимальное число например 999999999999 3298492 833 73
     mode = input("введите входное значение")
     print(maxstring(mode))
-if numoftusk == 8:
+if numoftusk == 8:#мин число например 2 32987 233 782 0
     mode = input("введите входное значение")
     print(minstring(mode))
-if numoftusk == 9:
+if numoftusk == 9:#наибольшее идущих под ряд
     mode = input("введите входное значение")
     print(rownummax(mode))
 if numoftusk == 10:
@@ -408,5 +410,4 @@ if numoftusk == 18:
 if numoftusk == 19:
     mode = input("введите входное значение")
     print(sortcounter(mode))
-
 
