@@ -380,16 +380,16 @@ if numoftusk == 8:#мин число например 2 32987 233 782 0
 if numoftusk == 9:#наибольшее идущих под ряд
     mode = input("введите входное значение")
     print(rownummax(mode))
-if numoftusk == 10:
+if numoftusk == 10:#сортировка по размеру
     mode = input("введите входное значение")
     print(srtringsortsekond(mode))
-if numoftusk == 11:
+if numoftusk == 11:#сортировка по гласным и согласным на вход сначала количество
     mode = input("введите входное значение")
-    print(countvowelsletter(mode))
-if numoftusk == 12:
+    print(sortbyletter(mode))
+if numoftusk == 12:#в порядке увеличения квадратичного откланения на вход кол-во строк
     mode = input("введите входное значение")
     print(ASCII(mode))
-if numoftusk == 13:
+if numoftusk == 13:#в порядке увеличения кв откланения частоты встречаемости популярного символа
     mode = input("введите входное значение")
     print(ASCII2(mode))
 if numoftusk == 14:
@@ -410,4 +410,3 @@ if numoftusk == 18:
 if numoftusk == 19:
     mode = input("введите входное значение")
     print(sortcounter(mode))
-
