@@ -27,7 +27,7 @@ def secondd(n):#кол-во нечетных чисел идущих до это
 
 #3
 def suminstr():#произведение числа сумма цифор которого меньше самого числа например 14
-    ch=int(input())
+    ch = int(input())
     chsum=sum([int(c) for c in str(ch)])
     #n=int(input())
     #a=[int(d) for d in str(n)]
