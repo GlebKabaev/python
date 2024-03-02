@@ -257,7 +257,7 @@ def coollettercounter(s):
     allraws=''
     for i in range(0, int(s)):
         print("№", i)
-        lst.insert(i, input())
+        lst.insert(i, str(input()))
     for i in range(0, int(s)):
         allraws +=lst[i]
     allrawscount = sorted([(allraws.count(letter), letter) for letter in set(allraws)], reverse=True)
@@ -392,21 +392,21 @@ if numoftusk == 12:#в порядке увеличения квадратичн�
 if numoftusk == 13:#в порядке увеличения кв откланения частоты встречаемости популярного символа
     mode = input("введите входное значение")
     print(ASCII2(mode))
-if numoftusk == 14:
+if numoftusk == 14:#В порядке увеличения кв отклонение частоты встречаемости самого частого символа сортировать строки
     mode = input("введите входное значение")
     print(coollettercounter(mode))
-if numoftusk == 15:
+if numoftusk == 15:#Сдвиг массива вправо
     mode = input("введите входное значение")
     print(pusharray(mode))
-if numoftusk == 16:
+if numoftusk == 16:#Сдвиг вправо на однгу позицию
     mode = input("введите входное значение")
     print(pusharray2(mode))
-if numoftusk == 17:
+if numoftusk == 17:#количество четных эллемоентов в массиве
     mode = input("введите входное значение")
     print(numcounter(mode))
-if numoftusk == 18:
+if numoftusk == 18:#кол-во минимальных эллементов в массиве
     mode = input("введите входное значение")
     print(mincounter(mode))
-if numoftusk == 19:
+if numoftusk == 19:#сортировка строк по частоте встречаемости
     mode = input("введите входное значение")
     print(sortcounter(mode))
