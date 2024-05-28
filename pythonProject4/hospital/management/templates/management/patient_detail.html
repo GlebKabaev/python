@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ patient.name }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ patient.name }}</h1>
+        <p><strong>Ward:</strong> {{ patient.id_ward }}</p>
+        <p><strong>Doctor:</strong> {{ patient.id_doc }}</p>
+        <a href="{% url 'index' %}" class="btn btn-secondary">Back</a>
+    </div>
+</body>
+</html>

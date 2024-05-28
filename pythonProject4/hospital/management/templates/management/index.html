@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Patients</h1>
+        <ul class="list-group">
+            {% for patient in patients %}
+                <li class="list-group-item">
+                    <a href="{% url 'patient_detail' patient.id %}">{{ patient.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'add_patient' %}" class="btn btn-primary mt-3">Add Patient</a>
+        <a href="{% url 'add_doctor' %}" class="btn btn-secondary mt-3">Add Doctor</a>
+        <a href="{% url 'add_ward' %}" class="btn btn-secondary mt-3">Add Ward</a>
+    </div>
+</body>
+</html>
